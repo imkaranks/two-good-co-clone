@@ -20,11 +20,11 @@
 
   --leading-heading: 1;
 
-  --fs-500: 24px;
+  --fs-500: 1.5rem;
   --fs-400: 1rem;
-  --fs-350: 14px;
-  --fs-300: 12px;
-  --fs-200: 10px;
+  --fs-350: 0.875rem;
+  --fs-300: 0.75rem;
+  --fs-200: 0.625rem;
 }
 
 .visually-hidden {
@@ -65,7 +65,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid var(--clr-foreground);
+  border-bottom: 1px solid hsl(var(--clr-foreground-hsl) / 20%);
 }
 
 .mx-auto {
