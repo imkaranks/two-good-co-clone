@@ -1,7 +1,50 @@
 (function () {
   const $cursor = document.getElementById('cursor');
   const $videoCursor = document.getElementById('video-cursor');
-  const $menuToggle = document.getElementById('menu-toggle');
+  const $testmonialReview = document.getElementById('review');
+
+  const testimonials = [
+    {
+      id: 'm// 001',
+      name: 'Cartier',
+      review: 'Thank you so much for the beautiful catering; it means a lot working with a company such as two good co.'
+    },
+    {
+      id: 'm// 002',
+      name: 'Felicity T',
+      review: 'The hampers we ordered were lovely and the team are wonderful to liase with.'
+    },
+    {
+      id: 'm// 003',
+      name: 'Barbara',
+      review: 'My package just arrived and the presentation is so beautiful; elegant, magical and meaningful, with the items wrapped in delicious-smelling tissue paper. Georgeous; Will be back for more.'
+    },
+    {
+      id: 'm// 004',
+      name: 'Salesforce',
+      review: 'I think I speak for everyone when I say we are very grateful to have been able to come in and help out for the day; The work you do is amazing.'
+    },
+    {
+      id: 'm// 005',
+      name: 'Cartier',
+      review: 'Thank you so much for the beautiful catering; it means a lot working with a company such as two good co.'
+    },
+    {
+      id: 'm// 006',
+      name: 'Felicity T',
+      review: 'The hampers we ordered were lovely and the team are wonderful to liase with.'
+    },
+    {
+      id: 'm// 007',
+      name: 'Barbara',
+      review: 'My package just arrived and the presentation is so beautiful; elegant, magical and meaningful, with the items wrapped in delicious-smelling tissue paper. Georgeous; Will be back for more.'
+    },
+    {
+      id: 'm// 008',
+      name: 'Salesforce',
+      review: 'I think I speak for everyone when I say we are very grateful to have been able to come in and help out for the day; The work you do is amazing.'
+    },
+  ];
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -31,31 +74,71 @@
     stagger: 0.2
   });
 
-  $menuToggle.onclick = function (event) {
-    const expanded = event.currentTarget.getAttribute('aria-expanded');
-    const $menu = document.getElementById(event.currentTarget.getAttribute('aria-controls'));
+  function loadTestimonials() {
+    let clutter = '';
+
+    testimonials.forEach((testimonial, i) => {
+      clutter += `
+        <div class="testimonial__author">
+            <input type="radio" name="author" id="${testimonial.id}" ${i == 0 ? 'checked' : ''}>
+            <label for="${testimonial.id}">
+              <span class="visually-hidden">${testimonial.name}'s Review</span>
+            </label>
+            <div>
+              <span class="text-500">${testimonial.id}</span>
+              <span class="text-500">${testimonial.name}.</span>
+            </div>
+          </div>
+      `;
+    });
+
+    document.querySelector('.testimonial__authors').innerHTML = clutter;
+  };
+
+  loadTestimonials();
+
+  document.addEventListener('click', (event) => {
+    if (event.target.closest('.menu-toggle')) {
+      toggleMenu(event.target.closest('.menu-toggle'));
+    } else if (event.target.closest('.testimonial__author > input')) {
+      const testimonialId = event.target.closest('.testimonial__author > input').id;
+
+      const review = testimonials.find(testimonial => testimonial.id === testimonialId)?.review;
+
+      if (review) {
+        $testmonialReview.textContent = review;
+      }
+    }
+  });
+
+  function toggleMenu($menuToggle) {
+    const expanded = $menuToggle.getAttribute('aria-expanded');
+    const $menu = document.getElementById(
+      $menuToggle.getAttribute('aria-controls')
+    );
 
     if (expanded === 'true') {
       gsap.to($menu, {
         y: '-100%',
         duration: 0.3
       });
-      gsap.to('.default-icon, .scrolled-icon', {
+      gsap.to('.header__logo', {
         color: 'black',
         duration: 0.3
       });
-      event.currentTarget.setAttribute('aria-expanded', false);
+      $menuToggle.setAttribute('aria-expanded', false);
     } else {
       gsap.to($menu, {
         y: 0,
         duration: 0.3
       });
-      gsap.to('.default-icon, .scrolled-icon', {
+      gsap.to('.header__logo', {
         color: 'white',
         duration: 0.3
       });
-      event.currentTarget.setAttribute('aria-expanded', true);
+      $menuToggle.setAttribute('aria-expanded', true);
     }
+    $menuToggle.classList.toggle('expanded');
   }
 
   function headerScrollAction($elem, props) {
@@ -112,6 +195,54 @@
       }
     });
   }
+
+  const sectionTriggerProps = $trigger => ({
+    trigger: $trigger,
+    scroller: '[data-scroll-container]',
+    start: "top bottom",
+    end: window.matchMedia('(min-width: 50em)').matches ? "bottom 105%" : "bottom 120%",
+    scrub: true
+  });
+
+  function cardTransition($elem, $trigger) {
+    gsap.from($elem, {
+      scrollTrigger: sectionTriggerProps($trigger),
+      y: '10vh',
+      opacity: 0,
+      stagger: 0.2
+    });
+  }
+
+  cardTransition('.products__card', '.products');
+
+  cardTransition('.featured__item', '.featured');
+
+  cardTransition('.footer__item svg > path', '.footer__wrapper');
+
+  cardTransition('.impact .scroll-img-wrapper', '.impact');
+
+  function headingTransition($trigger) {
+    gsap.to('[data-scroll-heading]', {
+      scrollTrigger: sectionTriggerProps($trigger),
+      y: 0,
+      opacity: 1
+    });
+  }
+
+  ['.belief', '.testimonial'].forEach(item => headingTransition(item));
+
+  function sectionTitleTransition($trigger) {
+    gsap.to($trigger + ' .section__title', {
+      scrollTrigger: {
+        ...sectionTriggerProps($trigger),
+        start: "top bottom",
+        end: "20% 80%"
+      },
+      '--_underline-scale': '1'
+    });
+  }
+
+  ['.featured__wrapper', '.testimonial__wrapper', '.footer'].forEach($section => sectionTitleTransition($section));
 
   document.getElementById('copyright-year').textContent = new Date().getFullYear();
 })();

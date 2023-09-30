@@ -21,21 +21,25 @@
       <nav class="nav" aria-label="Primary" id="primary-nav">
         <ul class="nav__list uppercase text-300">
           <li class="nav__item">
-            <a href="javascript:void(0)" class="nav__link">Shop</a>
+            <a href="javascript:void(0)" class="nav__link underlined-link">Shop</a>
           </li>
           <li class="nav__item">
-            <a href="javascript:void(0)" class="nav__link">Catering</a>
+            <a href="javascript:void(0)" class="nav__link underlined-link">
+              <span>Catering</span>
+              <i class="fa-solid fa-arrow-right" style="rotate: -45deg;" aria-hidden="true"></i>
+            </a>
           </li>
           <li class="nav__item">
-            <a href="javascript:void(0)" class="nav__link">Donate</a>
+            <a href="javascript:void(0)" class="nav__link underlined-link">Donate</a>
           </li>
         </ul>
       </nav>
 
       <div class="header__cta">
-        <button class="header__cta-btn text-300" id="menu-toggle" aria-expanded="false" aria-controls="menu">
+        <button class="header__cta-btn menu-toggle text-300" id="menu-toggle" aria-expanded="false" aria-controls="menu">
           <span class="visually-hidden">Menu</span>
-          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+          <span class="bar" aria-hidden="true"></span>
+          <span class="bar" aria-hidden="true"></span>
         </button>
         <button class="header__cta-btn text-300">
           <span class="visually-hidden">Cart</span>
@@ -213,14 +217,14 @@
       </div>
     </section>
 
-    <section class="section" data-scroll-section>
+    <section class="belief section" data-scroll-section>
       <div class="container grid-layout">
         <div class="col-span-2">
-          <h2 class="title-lg uppercase">
+          <h2 class="title-lg uppercase" data-scroll-heading>
             We believe in people, until they believe in themselves again.
           </h2>
         </div>
-        <div class="flow">
+        <div class="flow" data-space="lg">
           <p>
             Everything we do is designed to rebuild self worth and independence, in order to break free from the cycle of disadvantage.
           </p>
@@ -234,73 +238,37 @@
 
     <section class="products section" data-scroll-section>
       <div class="products__wrapper container" id="products-wrapper">
-        <div class="products__card text-center flow" data-rgba="233, 184, 36, 0.2" data-space="xs">
-          <img src="https://cdn.sanity.io/images/w8f1ak3c/production/d6a2a4be8e3063d64648773f57f5f447609a93ab-5000x5000.png/Love-Care-Pack-Expanded-Two-Good-Co.png?w=1024&h=1024&auto=format" alt="">
+        <div class="products__card text-center flow" data-rgba="248, 210, 16, 0.2" data-space="xs">
+          <img class="mx-auto" src="https://cdn.sanity.io/images/w8f1ak3c/production/d6a2a4be8e3063d64648773f57f5f447609a93ab-5000x5000.png/Love-Care-Pack-Expanded-Two-Good-Co.png?w=1024&h=1024&auto=format" alt="The Love + Care Pack">
           <h3 class="products__card-title text-300 uppercase">The Love + Care Pack</h3>
           <p class="products__card-price text-200">$50</p>
         </div>
         <div class="products__card text-center flow" data-rgba="255, 105, 105, 0.2" data-space="xs">
-          <img src="https://cdn.sanity.io/images/w8f1ak3c/production/d6a2a4be8e3063d64648773f57f5f447609a93ab-5000x5000.png/Love-Care-Pack-Expanded-Two-Good-Co.png?w=1024&h=1024&auto=format" alt="">
-          <h3 class="products__card-title text-300 uppercase">The Love + Care Pack</h3>
+          <img class="mx-auto" src="https://cdn.sanity.io/images/w8f1ak3c/production/7a2007de38624a0b2935416bf51a4584889aa232-5000x5000.png/Website%20Products%20(12).png?w=1024&h=1024&auto=format" alt="Two good tote bag">
+          <h3 class="products__card-title text-300 uppercase">Two good tote bag</h3>
+          <p class="products__card-price text-200">$50</p>
+        </div>
+        <div class="products__card text-center flow" data-rgba="93, 18, 210, 0.2" data-space="xs">
+          <img class="mx-auto" src="https://cdn.sanity.io/images/w8f1ak3c/production/99866b12faf44f7490e6037dc197947334ce0a72-1408x1408.png/Nourish%20&%20Soothe%20Hand%20Lotion%20Two%20Good%20Co.png?w=1024&h=1024&auto=format" alt="Nourish & sooth hand lotion">
+          <h3 class="products__card-title text-300 uppercase">Nourish & sooth hand lotion</h3>
           <p class="products__card-price text-200">$50</p>
         </div>
         <div class="products__card text-center flow" data-rgba="100, 153, 233, 0.2" data-space="xs">
-          <img src="https://cdn.sanity.io/images/w8f1ak3c/production/d6a2a4be8e3063d64648773f57f5f447609a93ab-5000x5000.png/Love-Care-Pack-Expanded-Two-Good-Co.png?w=1024&h=1024&auto=format" alt="">
-          <h3 class="products__card-title text-300 uppercase">The Love + Care Pack</h3>
-          <p class="products__card-price text-200">$50</p>
-        </div>
-        <div class="products__card text-center flow" data-rgba="20, 30, 70, 0.2" data-space="xs">
-          <img src="https://cdn.sanity.io/images/w8f1ak3c/production/d6a2a4be8e3063d64648773f57f5f447609a93ab-5000x5000.png/Love-Care-Pack-Expanded-Two-Good-Co.png?w=1024&h=1024&auto=format" alt="">
-          <h3 class="products__card-title text-300 uppercase">The Love + Care Pack</h3>
+          <img class="mx-auto" src="https://cdn.sanity.io/images/w8f1ak3c/production/02240d01db2e8bdc5c630e9832ff7e0c7614f733-1876x1876.png/Cookbook-Two-Recipes-For-Resilience-Two-Good-Co.png?w=1024&h=1024&auto=format" alt="Cookbook two">
+          <h3 class="products__card-title text-300 uppercase">Cookbook two</h3>
           <p class="products__card-price text-200">$50</p>
         </div>
       </div>
     </section>
 
     <section class="testimonial section" data-scroll-section>
-      <div class="container flow">
+      <div class="testimonial__wrapper container flow">
         <h2 class="section__title text-300 uppercase">
           <span>Words of goodness</span>
           <span>Messages of love & support</span>
         </h2>
-        <div class="testimonial__authors">
-          <div class="testimonial__author">
-            <input type="radio" name="author" id="1">
-            <label for="1"></label>
-            <span class="text-500">Lorem, ipsum.</span>
-          </div>
-          <div class="testimonial__author">
-            <input type="radio" name="author" id="2">
-            <label for="1"></label>
-            <span class="text-500">Lorem, ipsum.</span>
-          </div>
-          <div class="testimonial__author">
-            <input type="radio" name="author" id="3">
-            <label for="1"></label>
-            <span class="text-500">Lorem, ipsum.</span>
-          </div>
-          <div class="testimonial__author">
-            <input type="radio" name="author" id="4">
-            <label for="1"></label>
-            <span class="text-500">Lorem, ipsum.</span>
-          </div>
-          <div class="testimonial__author">
-            <input type="radio" name="author" id="5">
-            <label for="1"></label>
-            <span class="text-500">Lorem, ipsum.</span>
-          </div>
-          <div class="testimonial__author">
-            <input type="radio" name="author" id="6">
-            <label for="1"></label>
-            <span class="text-500">Lorem, ipsum.</span>
-          </div>
-          <div class="testimonial__author">
-            <input type="radio" name="author" id="7">
-            <label for="1"></label>
-            <span class="text-500">Lorem, ipsum.</span>
-          </div>
-        </div>
-        <blockquote class="title-lg text-center uppercase mx-auto">
+        <div class="testimonial__authors"></div>
+        <blockquote class="title-lg text-center uppercase mx-auto" id="review" data-scroll-heading>
           Thank you so much for the beautiful catering; it means a lot working with a company such as two good co.
         </blockquote>
         <button class="btn text-300 uppercase mx-auto" style="display: block;">Send your own message</button>
