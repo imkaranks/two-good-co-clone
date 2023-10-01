@@ -66,6 +66,10 @@
 
   ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
+  ScrollTrigger.config({
+    autoRefreshEvents: "DOMContentLoaded,load,visibilitychange" // omit resize
+  });
+
   ScrollTrigger.refresh();
 
   class PreLoader {
