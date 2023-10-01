@@ -68,10 +68,69 @@
 
   ScrollTrigger.refresh();
 
-  gsap.to('.hero__title > span > span', {
-    y: 0,
-    opacity: 1,
-    stagger: 0.2
+  class PreLoader {
+    constructor ($elem) {
+      this.$elem = $elem;
+      this.tl = null;
+    }
+
+    start() {
+      this.tl = gsap.to(this.$elem + ' > div', {
+        rotate: 360,
+        repeat: -1
+      });
+    }
+
+    stop() {
+      gsap.to(this.$elem, {
+        y: '-100%',
+        duration: 0.3
+      });
+
+      this.tl.pause();
+    }
+  };
+
+  class VideoPlayer {
+    constructor (elem) {
+      this.$player = document.querySelector(elem);
+      this.$video = this.$player.querySelector('video');
+
+      this.addEventListeners();
+    }
+
+    addEventListeners() {
+      this.$player.addEventListener('click', () => this.toggleFullScreen());
+
+      this.$video.play(); // For now, later will do something different
+    }
+
+    toggleFullScreen() {
+      if (document.fullscreenElement === null) {
+        this.$player.requestFullscreen();
+      } else {
+        document.exitFullscreen();
+      }
+      this.$player.classList.toggle('fullscreen');
+      this.$video.muted = !this.$video.muted;
+    }
+  };
+
+  const preLoader = new PreLoader('#preloader');
+
+  preLoader.start();
+
+  window.addEventListener('load', () => {
+    preLoader.stop();
+
+    new VideoPlayer('.hero__video');
+
+    gsap.to('.hero__title > span > span', {
+      y: 0,
+      opacity: 1,
+      stagger: 0.2,
+      delay: 0.3
+    });
   });
 
   function loadTestimonials() {
@@ -80,15 +139,15 @@
     testimonials.forEach((testimonial, i) => {
       clutter += `
         <div class="testimonial__author">
-            <input type="radio" name="author" id="${testimonial.id}" ${i == 0 ? 'checked' : ''}>
-            <label for="${testimonial.id}">
-              <span class="visually-hidden">${testimonial.name}'s Review</span>
-            </label>
-            <div>
-              <span class="text-500">${testimonial.id}</span>
-              <span class="text-500">${testimonial.name}.</span>
-            </div>
+          <input type="radio" name="author" id="${testimonial.id}" ${i == 0 ? 'checked' : ''}>
+          <label for="${testimonial.id}">
+            <span class="visually-hidden">${testimonial.name}'s Review</span>
+          </label>
+          <div>
+            <span class="text-500">${testimonial.id}</span>
+            <span class="text-500">${testimonial.name}.</span>
           </div>
+        </div>
       `;
     });
 
@@ -147,14 +206,14 @@
         trigger: '.header',
         scroller: '[data-scroll-container]',
         start: "top 0",
-        end: "top -5%",
+        end: "top -15%",
         scrub: true
       },
       ...props
     });
   }
 
-  headerScrollAction('#primary-nav', { y: '-100%', opacity: 0 });
+  headerScrollAction('#secondary-nav', { y: '-100%', opacity: 0 });
 
   headerScrollAction('.default-icon, .scrolled-icon', { y: -83 });
 

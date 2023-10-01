@@ -1,11 +1,15 @@
 @font-face {
   font-family: Futura;
-  src: url(../assets/fonts/Futura-Bold.ttf);
+  font-weight: 700;
+  src: url(../assets/fonts/futura-bold-webfont.woff2) format('woff2'),
+    url(../assets/fonts/futura-bold-webfont.woff) format('woff');
 }
 
 @font-face {
   font-family: Helvetica;
-  src: url(../assets/fonts/Helvetica-Regular.ttf);
+  font-weight: 400;
+  src: url(../assets/fonts/helvetica-regular-webfont.woff2) format('woff2'),
+    url(../assets/fonts/helvetica-regular-webfont.woff) format('woff');
 }
 
 :root {
@@ -20,11 +24,13 @@
 
   --leading-heading: 1;
 
-  --fs-500: 1.5rem;
-  --fs-400: 1rem;
-  --fs-350: 0.875rem;
-  --fs-300: 0.75rem;
   --fs-200: 0.625rem;
+  --fs-300: 0.75rem;
+  --fs-400: 1rem;
+  --fs-500: 1.5rem;
+  --fs-350: 0.875rem;
+  --fs-600: clamp(1.25rem, 4vw, 2.5rem);
+  --fs-700: clamp(var(--fs-500), 4vw, 3.375rem);
 }
 
 .visually-hidden {
@@ -107,7 +113,7 @@
   --_flow-spacer: 2.25em;
 }
 
-.underlined-link {
+.hoverable-link {
   --_clr-link-hsl: var(--clr-foreground-hsl);
   --_link-underline-offset: 0.2rem;
   text-decoration: none;
@@ -117,7 +123,8 @@
   transition: color 300ms ease;
 }
 
-.underlined-link::before {
+.hoverable-link::before {
+  --_link-underline-scale: 0;
   content: '';
   position: absolute;
   left: 0;
@@ -126,17 +133,21 @@
   height: 1px;
   background-color: currentColor;
   transition: transform 300ms ease;
-  transform: scaleX(0);
+  transform: scaleX(var(--_link-underline-scale));
   transform-origin: right;
 }
 
-.underlined-link:hover {
+.hoverable-link.underlined::before {
+  --_link-underline-scale: 1;
+}
+
+.hoverable-link:hover {
   color: hsl(var(--_clr-link-hsl) / 50%);
 }
 
-.underlined-link:hover::before {
+.hoverable-link:hover::before {
+  --_link-underline-scale: 1;
   transform-origin: left;
-  transform: scaleX(1);
 }
 
 .btn {
@@ -206,9 +217,14 @@
   text-align: center;
 }
 
-.title-lg {
-  font-size: clamp(1.5rem, 4vw, 54px);
+.text-700 {
+  font-size: var(--fs-700);
   max-width: 22ch;
+  line-height: var(--leading-heading);
+}
+
+.text-600 {
+  font-size: var(--fs-600);
   line-height: var(--leading-heading);
 }
 
