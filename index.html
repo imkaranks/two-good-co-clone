@@ -1,321 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.css">
-  <link rel="stylesheet" href="css/utils.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <title>Two Good Co Clone</title>
-</head>
-<body>
-  <div class="preloader" id="preloader">
-    <div></div>
-  </div>
-
-  <header class="header">
-    <div class="header__wrapper container">
-      <a class="header__logo" href="javascript:void(0)">
-        <span class="visually-hidden"></span>
-        <svg width="106" height="83" viewBox="0 0 106 83" fill="none" xmlns="http://www.w3.org/2000/svg" class="default-icon"><g clip-path="url(#clip0_2228_162)"><path d="M5.50062 6.4473H0V0.557617H17.7807V6.4473H12.2464V25.4842H5.50062V6.4473Z" fill="currentColor"></path><path d="M43.2791 12.4126C43.8662 14.6434 44.027 15.8982 44.0756 16.0715C44.386 14.504 44.629 13.2831 44.8235 12.4126L47.7402 0.56543H54.5571L47.5682 25.492H41.3047L38.2609 14.8582C38.0889 14.2327 37.8122 13.1173 37.4307 11.512C37.1204 12.8008 36.8773 13.9161 36.6006 14.8582L33.6091 25.492H27.3307L20.3418 0.56543H27.1549L29.9931 12.488C30.3035 13.7428 30.5466 14.9976 30.741 16.2185C30.9803 14.9298 31.2944 13.675 31.6048 12.488L34.7309 0.56543H40.1642L43.2791 12.4126Z" fill="currentColor"></path><path d="M76.5219 22.3113C74.173 24.6188 71.066 25.9784 67.7892 26.1326C64.5124 26.2867 61.2932 25.2248 58.7412 23.1478C57.3228 22.0067 56.1618 20.5745 55.3351 18.9463C54.5085 17.3181 54.0353 15.5313 53.9468 13.7045C53.8584 11.8778 54.1568 10.053 54.8223 8.35149C55.4877 6.64996 56.5049 5.11064 57.8063 3.83585C60.3099 1.37646 63.6678 0 67.1641 0C70.6604 0 74.0184 1.37646 76.5219 3.83585C77.7366 5.04162 78.7013 6.47878 79.3597 8.06372C80.0181 9.64865 80.3572 11.3497 80.3572 13.0679C80.3572 14.7861 80.0181 16.4872 79.3597 18.0721C78.7013 19.6571 77.7366 21.0942 76.5219 22.3V22.3113ZM73.6164 13.0604C73.6164 9.01712 70.9166 5.73879 67.1473 5.73879C63.378 5.73879 60.6782 8.98321 60.6782 13.0604C60.6782 17.1376 63.2023 20.382 67.1473 20.382C70.9876 20.382 73.6164 17.1413 73.6164 13.0604Z" fill="currentColor"></path><path d="M12.8 39.1893H26.0486C26.086 39.7131 26.086 40.203 26.086 40.6966C26.086 49.3069 21.2436 54.1905 13.2151 54.1905C9.27008 54.1905 6.19257 53.0374 3.70215 50.4939C1.3102 47.9834 -0.0176051 44.6329 0.000176313 41.1525C0.000176313 33.586 5.60923 28.1108 13.2151 28.1108C18.024 28.1108 21.797 30.0665 24.3547 33.8649L18.5101 36.6872C17.1265 34.7692 15.3952 33.831 13.2151 33.831C9.27008 33.831 6.71235 36.6194 6.71235 41.4314C6.71235 46.2434 9.23643 49.0658 13.2151 49.0658C16.7114 49.0658 19.1645 47.1138 19.5122 44.4271H12.7814L12.8 39.1893Z" fill="currentColor"></path><path d="M49.8502 50.4146C47.3392 52.8731 43.9766 54.249 40.4756 54.2506C37.4173 54.2246 34.4566 53.1629 32.0695 51.2361C30.6511 50.0946 29.49 48.662 28.6633 47.0335C27.8366 45.405 27.3634 43.6179 27.275 41.7909C27.1865 39.9638 27.485 38.1388 28.1504 36.4369C28.8159 34.7351 29.8332 33.1954 31.1347 31.9203C33.6382 29.4609 36.9961 28.0845 40.4924 28.0845C43.9887 28.0845 47.3467 29.4609 49.8502 31.9203C51.0649 33.1261 52.0296 34.5632 52.688 36.1482C53.3465 37.7331 53.6855 39.4342 53.6855 41.1524C53.6855 42.8706 53.3465 44.5717 52.688 46.1566C52.0296 47.7415 51.0649 49.1787 49.8502 50.3845V50.4146ZM46.9447 41.1486C46.9447 37.1054 44.2486 33.827 40.4756 33.827C36.7026 33.827 34.0065 37.0677 34.0065 41.1486C34.0065 45.2296 36.5306 48.4702 40.4756 48.4702C44.316 48.4702 46.9447 45.2258 46.9447 41.1486Z" fill="currentColor"></path><path d="M77.5629 50.4146C75.0506 52.871 71.6888 54.2466 68.1883 54.2506C65.129 54.224 62.1672 53.1624 59.7784 51.2361C58.3608 50.094 57.2004 48.6611 56.3745 47.0324C55.5485 45.4038 55.0758 43.6168 54.9877 41.7899C54.8997 39.9631 55.1983 38.1383 55.8637 36.4366C56.5292 34.735 57.5462 33.1955 58.8473 31.9203C61.3509 29.4609 64.7088 28.0845 68.2051 28.0845C71.7014 28.0845 75.0594 29.4609 77.5629 31.9203C78.7776 33.1261 79.7423 34.5632 80.4007 36.1482C81.0591 37.7331 81.3982 39.4342 81.3982 41.1524C81.3982 42.8706 81.0591 44.5717 80.4007 46.1566C79.7423 47.7415 78.7776 49.1787 77.5629 50.3845V50.4146ZM74.6574 41.1486C74.6574 37.1054 71.9576 33.827 68.1883 33.827C64.419 33.827 61.7192 37.0677 61.7192 41.1486C61.7192 45.2296 64.2433 48.4702 68.1883 48.4702C72.0286 48.4702 74.6574 45.2258 74.6574 41.1486Z" fill="currentColor"></path><path d="M83.7168 28.6606H89.6699C94.2693 28.6606 97.9713 28.7322 101.225 31.0346C104.336 33.2277 105.996 36.6869 105.996 41.1447C105.996 45.6024 104.336 49.0202 101.225 51.2547C98.1134 53.4893 94.718 53.5872 90.601 53.5872H83.7168V28.6606ZM91.5358 48.0103C96.6924 48.0103 99.1492 46.0245 99.1492 41.1447C99.1492 36.1933 96.6214 34.2413 91.5358 34.2413H90.3953V48.0103H91.5358Z" fill="currentColor"></path><path d="M18.9586 65.171C17.16 63.1474 15.4287 62.1564 13.2486 62.1564C9.34095 62.1564 6.74583 65.171 6.74583 69.3725C6.74583 73.2085 9.3073 76.3097 13.2486 76.3097C15.4287 76.3097 17.16 75.3338 18.9586 73.2952V80.7524C16.9763 81.7756 14.784 82.3175 12.5568 82.3351C5.25756 82.3351 0 76.777 0 69.2481C0 61.7193 5.25756 56.1763 12.5568 56.1763C14.7828 56.1891 16.975 56.7259 18.9586 57.7438V65.171Z" fill="currentColor"></path><path d="M42.4125 78.5214C40.0636 80.8289 36.9566 82.1885 33.6798 82.3426C30.403 82.4968 27.1838 81.4349 24.6318 79.3579C23.2135 78.2168 22.0524 76.7846 21.2258 75.1564C20.3991 73.5282 19.9259 71.7413 19.8375 69.9146C19.749 68.0879 20.0475 66.2631 20.7129 64.5616C21.3783 62.86 22.3956 61.3207 23.697 60.0459C26.1996 57.5922 29.5536 56.2192 33.0454 56.2192C36.5372 56.2192 39.8912 57.5922 42.3938 60.0459C43.6085 61.2517 44.5732 62.6889 45.2316 64.2738C45.8901 65.8587 46.2291 67.5598 46.2291 69.278C46.2291 70.9962 45.8901 72.6973 45.2316 74.2822C44.5732 75.8671 43.6085 77.3043 42.3938 78.5101L42.4125 78.5214ZM39.4883 69.2704C39.4883 65.2272 36.7922 61.9489 33.0192 61.9489C29.2462 61.9489 26.5501 65.1933 26.5501 69.2704C26.5501 73.3476 29.0742 76.5921 33.0192 76.5921C36.8596 76.5921 39.4883 73.3514 39.4883 69.2704Z" fill="currentColor"></path><path d="M49.8936 75.4543C50.5724 75.4475 51.238 75.6443 51.8057 76.0194C52.3733 76.3946 52.8176 76.9313 53.082 77.5614C53.3464 78.1915 53.4191 78.8865 53.2908 79.5583C53.1624 80.2301 52.8389 80.8483 52.3612 81.3344C51.8835 81.8205 51.2733 82.1526 50.608 82.2886C49.9426 82.4246 49.2522 82.3582 48.6244 82.098C47.9965 81.8378 47.4596 81.3954 47.0817 80.8271C46.7038 80.2587 46.502 79.59 46.502 78.9059C46.498 77.9951 46.853 77.12 47.4889 76.4728C48.1249 75.8256 48.9898 75.4593 49.8936 75.4543Z" fill="currentColor"></path></g><defs><clipPath id="clip0_2228_162"><rect width="106" height="82.3538" fill="white"></rect></clipPath></defs></svg>
-        <svg width="62" height="63" viewBox="0 0 62 63" fill="none" xmlns="http://www.w3.org/2000/svg" class="scrolled-icon"><path d="M46.8316 0C42.9105 0 39.1501 1.59236 36.3775 4.42677C33.605 7.26119 32.0474 11.1055 32.0474 15.114C32.0474 19.1224 33.605 22.9667 36.3775 25.8011C39.1501 28.6355 42.9105 30.2279 46.8316 30.2279C50.7526 30.2279 54.513 28.6355 57.2856 25.8011C60.0582 22.9667 61.6158 19.1224 61.6158 15.114C61.6158 11.1055 60.0582 7.26119 57.2856 4.42677C54.513 1.59236 50.7526 0 46.8316 0Z" fill="currentColor"></path><path d="M14.793 0C10.872 0 7.11154 1.59236 4.33897 4.42677C1.56639 7.26119 0.00878906 11.1055 0.00878906 15.114C0.00878906 19.1224 1.56639 22.9667 4.33897 25.8011C7.11154 28.6355 10.872 30.2279 14.793 30.2279C18.714 30.2279 22.4744 28.6355 25.247 25.8011C28.0196 22.9667 29.5772 19.1224 29.5772 15.114C29.5772 11.1055 28.0196 7.26119 25.247 4.42677C22.4744 1.59236 18.714 0 14.793 0Z" fill="currentColor"></path><path d="M36.9805 32.7422L32.0366 37.7963L56.6819 62.9913L61.6258 57.9372L36.9805 32.7422Z" fill="currentColor"></path><path d="M56.6836 32.7485L32.0383 57.9435L36.9822 62.9976L61.6275 37.8026L56.6836 32.7485Z" fill="currentColor"></path><path d="M4.94386 32.7464L0 37.8005L24.6453 62.9955L29.5892 57.9414L4.94386 32.7464Z" fill="currentColor"></path><path d="M24.647 32.7527L0.00170898 57.9477L4.94557 63.0018L29.5909 37.8068L24.647 32.7527Z" fill="currentColor"></path></svg>
-      </a>
-
-      <nav class="nav" aria-label="Secondary" id="secondary-nav">
-        <ul class="nav__list uppercase text-300">
-          <li class="nav__item">
-            <a href="javascript:void(0)" class="nav__link hoverable-link">Shop</a>
-          </li>
-          <li class="nav__item">
-            <a href="javascript:void(0)" class="nav__link hoverable-link">
-              <span>Catering</span>
-              <i class="fa-solid fa-arrow-right" style="rotate: -45deg;" aria-hidden="true"></i>
-            </a>
-          </li>
-          <li class="nav__item">
-            <a href="javascript:void(0)" class="nav__link hoverable-link">Donate</a>
-          </li>
-        </ul>
-      </nav>
-
-      <div class="header__cta">
-        <button class="header__cta-btn menu-toggle text-300" id="menu-toggle" aria-expanded="false" aria-controls="menu">
-          <span class="visually-hidden">Menu</span>
-          <span class="bar" aria-hidden="true"></span>
-          <span class="bar" aria-hidden="true"></span>
-        </button>
-        <button class="header__cta-btn text-300">
-          <span class="visually-hidden">Cart</span>
-          <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.9987 14.6668C6.36689 14.6668 6.66536 14.3684 6.66536 14.0002C6.66536 13.632 6.36689 13.3335 5.9987 13.3335C5.63051 13.3335 5.33203 13.632 5.33203 14.0002C5.33203 14.3684 5.63051 14.6668 5.9987 14.6668Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M13.3346 14.6668C13.7028 14.6668 14.0013 14.3684 14.0013 14.0002C14.0013 13.632 13.7028 13.3335 13.3346 13.3335C12.9664 13.3335 12.668 13.632 12.668 14.0002C12.668 14.3684 12.9664 14.6668 13.3346 14.6668Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M0.667969 0.666504H3.33464L5.1213 9.59317C5.18226 9.9001 5.34924 10.1758 5.593 10.372C5.83676 10.5683 6.14177 10.6725 6.45464 10.6665H12.9346C13.2475 10.6725 13.5525 10.5683 13.7963 10.372C14.04 10.1758 14.207 9.9001 14.268 9.59317L15.3346 3.99984H4.0013" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2 30.5L8.25 24.25M14.5 18L8.25 24.25M8.25 24.25L14.5 30.5L2 18" stroke="currentColor"></path><circle class="go3988220986" cx="15.1653" cy="2.83331" r="2.83331" fill="#9FF97F"></circle></svg>
-        </button>
-      </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
+      integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/utils.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Two Good Co Clone</title>
+  </head>
+  <body>
+    <div class="preloader" id="preloader">
+      <div></div>
     </div>
-  </header>
 
-  <div class="menu" id="menu">
-    <div class="menu__wrapper container">
-      <div class="menu-list flow" style="--_clr-menu-list-hsl: var(--clr-background-hsl);">
-        <h3 class="menu-list__title text-300 font-primary weight-normal uppercase">Connect with us</h3>
-        <ul class="text-350" role="list">
-          <li>
-            <a href="javascript:void(0)">Facebook</a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">Instagram</a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">Twitter</a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">LinkedIn</a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">YouTube</a>
-          </li>
-        </ul>
-      </div>
-      <div class="menu-list flow" style="--_clr-menu-list-hsl: var(--clr-background-hsl);">
-        <h3 class="menu-list__title text-300 font-primary weight-normal uppercase">Nitty gritties</h3>
-        <ul class="text-350" role="list">
-          <li>
-            <a href="javascript:void(0)">Good Things FAQs</a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">Good Food FAQs</a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">Good Places</a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">Pathways</a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">Careers</a>
-          </li>
-        </ul>
-      </div>
-      <nav class="font-accent uppercase" aria-label="Primary">
-        <ul role="list">
-          <li>
-            <a href="javascript:void(0)">Shop</a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">Catering</a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">Impact</a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">Stories</a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">About</a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">Contact</a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">Donate</a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">Sign in</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
+    <header class="header">
+      <div class="header__wrapper container">
+        <a class="header__logo" href="javascript:void(0)">
+          <span class="visually-hidden"></span>
+          <svg
+            width="106"
+            height="83"
+            viewBox="0 0 106 83"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="default-icon"
+          >
+            <g clip-path="url(#clip0_2228_162)">
+              <path
+                d="M5.50062 6.4473H0V0.557617H17.7807V6.4473H12.2464V25.4842H5.50062V6.4473Z"
+                fill="currentColor"
+              ></path>
+              <path
+                d="M43.2791 12.4126C43.8662 14.6434 44.027 15.8982 44.0756 16.0715C44.386 14.504 44.629 13.2831 44.8235 12.4126L47.7402 0.56543H54.5571L47.5682 25.492H41.3047L38.2609 14.8582C38.0889 14.2327 37.8122 13.1173 37.4307 11.512C37.1204 12.8008 36.8773 13.9161 36.6006 14.8582L33.6091 25.492H27.3307L20.3418 0.56543H27.1549L29.9931 12.488C30.3035 13.7428 30.5466 14.9976 30.741 16.2185C30.9803 14.9298 31.2944 13.675 31.6048 12.488L34.7309 0.56543H40.1642L43.2791 12.4126Z"
+                fill="currentColor"
+              ></path>
+              <path
+                d="M76.5219 22.3113C74.173 24.6188 71.066 25.9784 67.7892 26.1326C64.5124 26.2867 61.2932 25.2248 58.7412 23.1478C57.3228 22.0067 56.1618 20.5745 55.3351 18.9463C54.5085 17.3181 54.0353 15.5313 53.9468 13.7045C53.8584 11.8778 54.1568 10.053 54.8223 8.35149C55.4877 6.64996 56.5049 5.11064 57.8063 3.83585C60.3099 1.37646 63.6678 0 67.1641 0C70.6604 0 74.0184 1.37646 76.5219 3.83585C77.7366 5.04162 78.7013 6.47878 79.3597 8.06372C80.0181 9.64865 80.3572 11.3497 80.3572 13.0679C80.3572 14.7861 80.0181 16.4872 79.3597 18.0721C78.7013 19.6571 77.7366 21.0942 76.5219 22.3V22.3113ZM73.6164 13.0604C73.6164 9.01712 70.9166 5.73879 67.1473 5.73879C63.378 5.73879 60.6782 8.98321 60.6782 13.0604C60.6782 17.1376 63.2023 20.382 67.1473 20.382C70.9876 20.382 73.6164 17.1413 73.6164 13.0604Z"
+                fill="currentColor"
+              ></path>
+              <path
+                d="M12.8 39.1893H26.0486C26.086 39.7131 26.086 40.203 26.086 40.6966C26.086 49.3069 21.2436 54.1905 13.2151 54.1905C9.27008 54.1905 6.19257 53.0374 3.70215 50.4939C1.3102 47.9834 -0.0176051 44.6329 0.000176313 41.1525C0.000176313 33.586 5.60923 28.1108 13.2151 28.1108C18.024 28.1108 21.797 30.0665 24.3547 33.8649L18.5101 36.6872C17.1265 34.7692 15.3952 33.831 13.2151 33.831C9.27008 33.831 6.71235 36.6194 6.71235 41.4314C6.71235 46.2434 9.23643 49.0658 13.2151 49.0658C16.7114 49.0658 19.1645 47.1138 19.5122 44.4271H12.7814L12.8 39.1893Z"
+                fill="currentColor"
+              ></path>
+              <path
+                d="M49.8502 50.4146C47.3392 52.8731 43.9766 54.249 40.4756 54.2506C37.4173 54.2246 34.4566 53.1629 32.0695 51.2361C30.6511 50.0946 29.49 48.662 28.6633 47.0335C27.8366 45.405 27.3634 43.6179 27.275 41.7909C27.1865 39.9638 27.485 38.1388 28.1504 36.4369C28.8159 34.7351 29.8332 33.1954 31.1347 31.9203C33.6382 29.4609 36.9961 28.0845 40.4924 28.0845C43.9887 28.0845 47.3467 29.4609 49.8502 31.9203C51.0649 33.1261 52.0296 34.5632 52.688 36.1482C53.3465 37.7331 53.6855 39.4342 53.6855 41.1524C53.6855 42.8706 53.3465 44.5717 52.688 46.1566C52.0296 47.7415 51.0649 49.1787 49.8502 50.3845V50.4146ZM46.9447 41.1486C46.9447 37.1054 44.2486 33.827 40.4756 33.827C36.7026 33.827 34.0065 37.0677 34.0065 41.1486C34.0065 45.2296 36.5306 48.4702 40.4756 48.4702C44.316 48.4702 46.9447 45.2258 46.9447 41.1486Z"
+                fill="currentColor"
+              ></path>
+              <path
+                d="M77.5629 50.4146C75.0506 52.871 71.6888 54.2466 68.1883 54.2506C65.129 54.224 62.1672 53.1624 59.7784 51.2361C58.3608 50.094 57.2004 48.6611 56.3745 47.0324C55.5485 45.4038 55.0758 43.6168 54.9877 41.7899C54.8997 39.9631 55.1983 38.1383 55.8637 36.4366C56.5292 34.735 57.5462 33.1955 58.8473 31.9203C61.3509 29.4609 64.7088 28.0845 68.2051 28.0845C71.7014 28.0845 75.0594 29.4609 77.5629 31.9203C78.7776 33.1261 79.7423 34.5632 80.4007 36.1482C81.0591 37.7331 81.3982 39.4342 81.3982 41.1524C81.3982 42.8706 81.0591 44.5717 80.4007 46.1566C79.7423 47.7415 78.7776 49.1787 77.5629 50.3845V50.4146ZM74.6574 41.1486C74.6574 37.1054 71.9576 33.827 68.1883 33.827C64.419 33.827 61.7192 37.0677 61.7192 41.1486C61.7192 45.2296 64.2433 48.4702 68.1883 48.4702C72.0286 48.4702 74.6574 45.2258 74.6574 41.1486Z"
+                fill="currentColor"
+              ></path>
+              <path
+                d="M83.7168 28.6606H89.6699C94.2693 28.6606 97.9713 28.7322 101.225 31.0346C104.336 33.2277 105.996 36.6869 105.996 41.1447C105.996 45.6024 104.336 49.0202 101.225 51.2547C98.1134 53.4893 94.718 53.5872 90.601 53.5872H83.7168V28.6606ZM91.5358 48.0103C96.6924 48.0103 99.1492 46.0245 99.1492 41.1447C99.1492 36.1933 96.6214 34.2413 91.5358 34.2413H90.3953V48.0103H91.5358Z"
+                fill="currentColor"
+              ></path>
+              <path
+                d="M18.9586 65.171C17.16 63.1474 15.4287 62.1564 13.2486 62.1564C9.34095 62.1564 6.74583 65.171 6.74583 69.3725C6.74583 73.2085 9.3073 76.3097 13.2486 76.3097C15.4287 76.3097 17.16 75.3338 18.9586 73.2952V80.7524C16.9763 81.7756 14.784 82.3175 12.5568 82.3351C5.25756 82.3351 0 76.777 0 69.2481C0 61.7193 5.25756 56.1763 12.5568 56.1763C14.7828 56.1891 16.975 56.7259 18.9586 57.7438V65.171Z"
+                fill="currentColor"
+              ></path>
+              <path
+                d="M42.4125 78.5214C40.0636 80.8289 36.9566 82.1885 33.6798 82.3426C30.403 82.4968 27.1838 81.4349 24.6318 79.3579C23.2135 78.2168 22.0524 76.7846 21.2258 75.1564C20.3991 73.5282 19.9259 71.7413 19.8375 69.9146C19.749 68.0879 20.0475 66.2631 20.7129 64.5616C21.3783 62.86 22.3956 61.3207 23.697 60.0459C26.1996 57.5922 29.5536 56.2192 33.0454 56.2192C36.5372 56.2192 39.8912 57.5922 42.3938 60.0459C43.6085 61.2517 44.5732 62.6889 45.2316 64.2738C45.8901 65.8587 46.2291 67.5598 46.2291 69.278C46.2291 70.9962 45.8901 72.6973 45.2316 74.2822C44.5732 75.8671 43.6085 77.3043 42.3938 78.5101L42.4125 78.5214ZM39.4883 69.2704C39.4883 65.2272 36.7922 61.9489 33.0192 61.9489C29.2462 61.9489 26.5501 65.1933 26.5501 69.2704C26.5501 73.3476 29.0742 76.5921 33.0192 76.5921C36.8596 76.5921 39.4883 73.3514 39.4883 69.2704Z"
+                fill="currentColor"
+              ></path>
+              <path
+                d="M49.8936 75.4543C50.5724 75.4475 51.238 75.6443 51.8057 76.0194C52.3733 76.3946 52.8176 76.9313 53.082 77.5614C53.3464 78.1915 53.4191 78.8865 53.2908 79.5583C53.1624 80.2301 52.8389 80.8483 52.3612 81.3344C51.8835 81.8205 51.2733 82.1526 50.608 82.2886C49.9426 82.4246 49.2522 82.3582 48.6244 82.098C47.9965 81.8378 47.4596 81.3954 47.0817 80.8271C46.7038 80.2587 46.502 79.59 46.502 78.9059C46.498 77.9951 46.853 77.12 47.4889 76.4728C48.1249 75.8256 48.9898 75.4593 49.8936 75.4543Z"
+                fill="currentColor"
+              ></path>
+            </g>
+            <defs>
+              <clipPath id="clip0_2228_162">
+                <rect width="106" height="82.3538" fill="white"></rect>
+              </clipPath>
+            </defs>
+          </svg>
+          <svg
+            width="62"
+            height="63"
+            viewBox="0 0 62 63"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="scrolled-icon"
+          >
+            <path
+              d="M46.8316 0C42.9105 0 39.1501 1.59236 36.3775 4.42677C33.605 7.26119 32.0474 11.1055 32.0474 15.114C32.0474 19.1224 33.605 22.9667 36.3775 25.8011C39.1501 28.6355 42.9105 30.2279 46.8316 30.2279C50.7526 30.2279 54.513 28.6355 57.2856 25.8011C60.0582 22.9667 61.6158 19.1224 61.6158 15.114C61.6158 11.1055 60.0582 7.26119 57.2856 4.42677C54.513 1.59236 50.7526 0 46.8316 0Z"
+              fill="currentColor"
+            ></path>
+            <path
+              d="M14.793 0C10.872 0 7.11154 1.59236 4.33897 4.42677C1.56639 7.26119 0.00878906 11.1055 0.00878906 15.114C0.00878906 19.1224 1.56639 22.9667 4.33897 25.8011C7.11154 28.6355 10.872 30.2279 14.793 30.2279C18.714 30.2279 22.4744 28.6355 25.247 25.8011C28.0196 22.9667 29.5772 19.1224 29.5772 15.114C29.5772 11.1055 28.0196 7.26119 25.247 4.42677C22.4744 1.59236 18.714 0 14.793 0Z"
+              fill="currentColor"
+            ></path>
+            <path
+              d="M36.9805 32.7422L32.0366 37.7963L56.6819 62.9913L61.6258 57.9372L36.9805 32.7422Z"
+              fill="currentColor"
+            ></path>
+            <path
+              d="M56.6836 32.7485L32.0383 57.9435L36.9822 62.9976L61.6275 37.8026L56.6836 32.7485Z"
+              fill="currentColor"
+            ></path>
+            <path
+              d="M4.94386 32.7464L0 37.8005L24.6453 62.9955L29.5892 57.9414L4.94386 32.7464Z"
+              fill="currentColor"
+            ></path>
+            <path
+              d="M24.647 32.7527L0.00170898 57.9477L4.94557 63.0018L29.5909 37.8068L24.647 32.7527Z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </a>
 
-  <div data-scroll-container>
-    <section class="hero section" data-scroll-section>
-      <div class="container flow">
-        <h1 class="hero__title uppercase">
-          <span><span>Change</span></span>
-          <span><span>The</span></span>
-          <span><span>Course</span></span>
-        </h1>
+        <nav class="nav" aria-label="Secondary" id="secondary-nav">
+          <ul class="nav__list uppercase text-300">
+            <li class="nav__item">
+              <a href="javascript:void(0)" class="nav__link hoverable-link"
+                >Shop</a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="javascript:void(0)" class="nav__link hoverable-link">
+                <span>Catering</span>
+                <i
+                  class="fa-solid fa-arrow-right"
+                  style="rotate: -45deg"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="javascript:void(0)" class="nav__link hoverable-link"
+                >Donate</a
+              >
+            </li>
+          </ul>
+        </nav>
 
-        <div class="hero__video">
-          <video loop muted src="./assets/media/video.mp4"></video>
+        <div class="header__cta">
+          <button
+            class="header__cta-btn menu-toggle text-300"
+            id="menu-toggle"
+            aria-expanded="false"
+            aria-controls="menu"
+          >
+            <span class="visually-hidden">Menu</span>
+            <span class="bar" aria-hidden="true"></span>
+            <span class="bar" aria-hidden="true"></span>
+          </button>
+          <button class="header__cta-btn text-300">
+            <span class="visually-hidden">Cart</span>
+            <svg
+              width="18"
+              height="16"
+              viewBox="0 0 18 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.9987 14.6668C6.36689 14.6668 6.66536 14.3684 6.66536 14.0002C6.66536 13.632 6.36689 13.3335 5.9987 13.3335C5.63051 13.3335 5.33203 13.632 5.33203 14.0002C5.33203 14.3684 5.63051 14.6668 5.9987 14.6668Z"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M13.3346 14.6668C13.7028 14.6668 14.0013 14.3684 14.0013 14.0002C14.0013 13.632 13.7028 13.3335 13.3346 13.3335C12.9664 13.3335 12.668 13.632 12.668 14.0002C12.668 14.3684 12.9664 14.6668 13.3346 14.6668Z"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M0.667969 0.666504H3.33464L5.1213 9.59317C5.18226 9.9001 5.34924 10.1758 5.593 10.372C5.83676 10.5683 6.14177 10.6725 6.45464 10.6665H12.9346C13.2475 10.6725 13.5525 10.5683 13.7963 10.372C14.04 10.1758 14.207 9.9001 14.268 9.59317L15.3346 3.99984H4.0013"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M2 30.5L8.25 24.25M14.5 18L8.25 24.25M8.25 24.25L14.5 30.5L2 18"
+                stroke="currentColor"
+              ></path>
+              <circle
+                class="go3988220986"
+                cx="15.1653"
+                cy="2.83331"
+                r="2.83331"
+                fill="#9FF97F"
+              ></circle>
+            </svg>
+          </button>
         </div>
       </div>
-    </section>
+    </header>
 
-    <section class="featured section" data-scroll-section>
-      <div class="featured__wrapper container">
-        <h2 class="section__title text-300 uppercase">
-          <span>Buy Good</span>
-          <span>Do Good</span>
-        </h2>
-        <div class="grid-layout">
-          <div class="featured__item scroll-img-wrapper">
-            <img data-scroll data-scroll-speed="-1" src="https://cdn.sanity.io/images/w8f1ak3c/production/ee1c2e8894a4c47c4f4ce71b8973589f8a5045b2-902x1500.png/Rectangle%203.png?rect=1,0,900,1500&w=640&h=1067&fit=min&auto=format" alt="">
-            <div class="featured__dropdown" style="--_bg-dropdown: #c3d8c5;" data-scroll data-scroll-speed="-2">
-              <div class="featured__dropdown-controls text-300">
-                <i class="fa-solid fa-circle fa-2xs" aria-hidden="true"></i>
-                <div class="uppercase">Shop</div>
-                <div class="uppercase" style="font-weight: 600;">Home</div>
-                <i class="fa-solid fa-chevron-right fa-2xs"></i>
-              </div>
-              <div class="featured__dropdown-list">
-                <div class="text-center">
-                  <figure>
-                    <img width=100% src="https://cdn.sanity.io/images/w8f1ak3c/production/f43af4d1c96e6232fcc4743fc383f08aac0d3658-2900x2900.png/Tea-Towel-Two-Good-Co.png?w=320&h=320&auto=format" alt="">
-                    <figcaption class="text-300 uppercase">Two good towel</figcaption>
-                  </figure>
-                  <figure>
-                    <img width=100% src="https://cdn.sanity.io/images/w8f1ak3c/production/f43af4d1c96e6232fcc4743fc383f08aac0d3658-2900x2900.png/Tea-Towel-Two-Good-Co.png?w=320&h=320&auto=format" alt="">
-                    <figcaption class="text-300 uppercase">Two good towel</figcaption>
-                  </figure>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="featured__item scroll-img-wrapper">
-            <img data-scroll data-scroll-speed="-1" src="https://cdn.sanity.io/images/w8f1ak3c/production/bb84b7106e978c37f5aa92c8d5781751b2e9d9f2-900x1500.png/Rectangle%202.png?w=420&h=700&auto=format" alt="">
-            <div class="featured__dropdown" data-scroll data-scroll-speed="-2">
-              <div class="featured__dropdown-controls text-300">
-                <i class="fa-solid fa-circle fa-2xs" aria-hidden="true"></i>
-                <div class="uppercase">Shop</div>
-                <div class="uppercase" style="font-weight: 600;">Pantry</div>
-                <i class="fa-solid fa-chevron-right fa-2xs"></i>
-              </div>
-              <div class="featured__dropdown-list">
-                <div class="text-center">
-                  <figure>
-                    <img width=100% src="https://cdn.sanity.io/images/w8f1ak3c/production/f43af4d1c96e6232fcc4743fc383f08aac0d3658-2900x2900.png/Tea-Towel-Two-Good-Co.png?w=320&h=320&auto=format" alt="">
-                    <figcaption class="text-300 uppercase">Two good towel</figcaption>
-                  </figure>
-                  <figure>
-                    <img width=100% src="https://cdn.sanity.io/images/w8f1ak3c/production/f43af4d1c96e6232fcc4743fc383f08aac0d3658-2900x2900.png/Tea-Towel-Two-Good-Co.png?w=320&h=320&auto=format" alt="">
-                    <figcaption class="text-300 uppercase">Two good towel</figcaption>
-                  </figure>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="featured__item scroll-img-wrapper">
-            <img data-scroll data-scroll-speed="-1" src="https://cdn.sanity.io/images/w8f1ak3c/production/d3151106849ff2494d66916cf554c68a0603444d-902x1500.png/Rectangle%20220.png?rect=1,0,900,1500&w=640&h=1067&fit=min&auto=format" alt="">
-            <div class="featured__dropdown" style="--_bg-dropdown: var(--clr-background);" data-scroll data-scroll-speed="-2">
-              <div class="featured__dropdown-controls text-300">
-                <i class="fa-solid fa-circle fa-2xs" aria-hidden="true"></i>
-                <div class="uppercase">Shop</div>
-                <div class="uppercase" style="font-weight: 600;">Bath</div>
-                <i class="fa-solid fa-chevron-right fa-2xs"></i>
-              </div>
-              <div class="featured__dropdown-list">
-                <div class="text-center">
-                  <figure>
-                    <img width=100% src="https://cdn.sanity.io/images/w8f1ak3c/production/f43af4d1c96e6232fcc4743fc383f08aac0d3658-2900x2900.png/Tea-Towel-Two-Good-Co.png?w=320&h=320&auto=format" alt="">
-                    <figcaption class="text-300 uppercase">Two good towel</figcaption>
-                  </figure>
-                  <figure>
-                    <img width=100% src="https://cdn.sanity.io/images/w8f1ak3c/production/f43af4d1c96e6232fcc4743fc383f08aac0d3658-2900x2900.png/Tea-Towel-Two-Good-Co.png?w=320&h=320&auto=format" alt="">
-                    <figcaption class="text-300 uppercase">Two good towel</figcaption>
-                  </figure>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="belief section" data-scroll-section>
-      <div class="container grid-layout">
-        <div class="col-span-2">
-          <h2 class="text-700 uppercase" data-scroll-heading>
-            We believe in people, until they believe in themselves again.
-          </h2>
-        </div>
-        <div class="flow" data-space="lg">
-          <p>
-            Everything we do is designed to rebuild self worth and independence, in order to break free from the cycle of disadvantage.
-          </p>
-          <p>
-            With every purchase you make with us, you're helping to change the course of someone's life; you're walking alongside vulnerable women as they find their way home again.
-          </p>
-          <a class="hoverable-link underlined text-300 uppercase" href="javascript:void(0)">Shop to support</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="products section" data-scroll-section>
-      <div class="products__wrapper container" id="products-wrapper">
-        <div class="products__card text-center flow" data-rgba="248, 210, 16, 0.2" data-space="xs">
-          <img class="mx-auto" width=80% src="https://cdn.sanity.io/images/w8f1ak3c/production/d6a2a4be8e3063d64648773f57f5f447609a93ab-5000x5000.png/Love-Care-Pack-Expanded-Two-Good-Co.png?w=1024&h=1024&auto=format" alt="The Love + Care Pack">
-          <h3 class="products__card-title weight-normal font-primary text-300 uppercase">The Love + Care Pack</h3>
-          <p class="products__card-price text-200">$50</p>
-        </div>
-        <div class="products__card text-center flow" data-rgba="255, 105, 105, 0.2" data-space="xs">
-          <img class="mx-auto" width=80% src="https://cdn.sanity.io/images/w8f1ak3c/production/7a2007de38624a0b2935416bf51a4584889aa232-5000x5000.png/Website%20Products%20(12).png?w=1024&h=1024&auto=format" alt="Two good tote bag">
-          <h3 class="products__card-title weight-normal font-primary text-300 uppercase">Two good tote bag</h3>
-          <p class="products__card-price text-200">$50</p>
-        </div>
-        <div class="products__card text-center flow" data-rgba="93, 18, 210, 0.2" data-space="xs">
-          <img class="mx-auto" width=80% src="https://cdn.sanity.io/images/w8f1ak3c/production/99866b12faf44f7490e6037dc197947334ce0a72-1408x1408.png/Nourish%20&%20Soothe%20Hand%20Lotion%20Two%20Good%20Co.png?w=1024&h=1024&auto=format" alt="Nourish & sooth hand lotion">
-          <h3 class="products__card-title weight-normal font-primary text-300 uppercase">Nourish & sooth hand lotion</h3>
-          <p class="products__card-price text-200">$50</p>
-        </div>
-        <div class="products__card text-center flow" data-rgba="100, 153, 233, 0.2" data-space="xs">
-          <img class="mx-auto" width=80% src="https://cdn.sanity.io/images/w8f1ak3c/production/02240d01db2e8bdc5c630e9832ff7e0c7614f733-1876x1876.png/Cookbook-Two-Recipes-For-Resilience-Two-Good-Co.png?w=1024&h=1024&auto=format" alt="Cookbook two">
-          <h3 class="products__card-title weight-normal font-primary text-300 uppercase">Cookbook two</h3>
-          <p class="products__card-price text-200">$50</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="testimonial section" data-scroll-section>
-      <div class="testimonial__wrapper container flow">
-        <h2 class="section__title text-300 uppercase">
-          <span>Words of goodness</span>
-          <span>Messages of love & support</span>
-        </h2>
-        <div class="testimonial__authors"></div>
-        <blockquote class="text-700 font-accent text-center uppercase mx-auto" id="review" data-scroll-heading>
-          Thank you so much for the beautiful catering; it means a lot working with a company such as two good co.
-        </blockquote>
-        <button class="btn text-300 uppercase mx-auto" style="display: block;">Send your own message</button>
-        <p class="text-center mx-auto">
-          Sometimes it's the smallest actions that can make the biggest impact.
-        </p>
-      </div>
-    </section>
-
-    <section class="section impact" data-scroll-section>
-      <div class="impact__wrapper container">
-        <div class="flow">
-          <h2 class="text-500 uppercase">Our impact.</h2>
-
-          <p>The thing is, we don't save anyone.</p>
-          <p>What we do is provide a safe space for women to change the course of their own lives.</p>
-          <p>After many years of living in crisis, abuse and complex trauma, restoring self-worth is foundational for independence. We believe that through experiences that promote love and respect, we can spark and nurture a sense of self-worth for those on the path of healing.</p>
-
-          <a class="hoverable-link underlined text-300 uppercase" href="javascript:void(0)">Here's how we do it</a>
-        </div>
-        <div class="scroll-img-wrapper">
-          <img data-scroll data-scroll-speed="-1" src="https://cdn.sanity.io/images/w8f1ak3c/production/943f8f43b76b4e030f41deddca1edd44170fee39-5504x8256.jpg/Christina-Maria-Jes-Lindsay-9143.jpg?fp-x=0.5&fp-y=0.5&w=420&h=621&fit=crop&crop=focalpoint&auto=format" alt="">
-        </div>
-        <div class="scroll-img-wrapper">
-          <img data-scroll data-scroll-speed="-1" src="https://cdn.sanity.io/images/w8f1ak3c/production/84da7b8b510e006ce0ca22769d93bb6c044945f6-5504x8256.jpg/Patricia-Work-Work-Good-Stories-Two-Good-Co.jpg?rect=0,59,5504,8138&w=420&h=621&fit=min&auto=format" alt="">
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer" data-scroll-section>
-      <div class="footer__wrapper container">
-        <h2 class="section__title uppercase">
-          <span class="text-600 font-accent">Enter your email address for good</span>
-          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-        </h2>
-        <div class="footer__item">
-          <a href="javascript:void(0)">
-            <svg viewBox="0 0 216 215" fill="var(--clr-foreground)" xmlns="http://www.w3.org/2000/svg"><path d="M51.7757 0C38.0521 0 24.8906 5.43423 15.1866 15.1072C5.48261 24.7802 0.0309982 37.8997 0.0309982 51.5794C0.0309982 65.2591 5.48261 78.3785 15.1866 88.0515C24.8906 97.7245 38.0521 103.159 51.7757 103.159C65.4992 103.159 78.6607 97.7245 88.3647 88.0515C98.0687 78.3785 103.52 65.2591 103.52 51.5794C103.52 37.8997 98.0687 24.7802 88.3647 15.1072C78.6607 5.43423 65.4992 0 51.7757 0Z" data-svg-origin="51.775497406721115 51.579498291015625" transform="matrix(1,0,0,1,0,0)" style="transform-origin: 0px 0px; opacity: 1;"></path><path d="M163.911 0C150.187 0 137.026 5.43423 127.322 15.1072C117.618 24.7802 112.166 37.8997 112.166 51.5794C112.166 65.2591 117.618 78.3785 127.322 88.0515C137.026 97.7245 150.187 103.159 163.911 103.159C177.634 103.159 190.796 97.7245 200.5 88.0515C210.204 78.3785 215.655 65.2591 215.655 51.5794C215.655 37.8997 210.204 24.7802 200.5 15.1072C190.796 5.43423 177.634 0 163.911 0Z" data-svg-origin="163.9104995727539 51.579498291015625" transform="matrix(1,0,0,1,0,0)" style="transform-origin: 0px 0px; opacity: 1;"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M0 129.002L17.3035 111.753L51.795 146.135L86.2649 111.775L103.568 129.023L69.0982 163.383L103.562 197.737L86.2586 214.985L51.7947 180.631L17.3099 215.006L0.00634766 197.758L34.4914 163.383L0 129.002Z" data-svg-origin="51.784000396728516 163.37949752807617" transform="matrix(1,0,0,1,0,0)" style="transform-origin: 0px 0px; opacity: 1;"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M112.128 128.988L129.431 111.739L163.923 146.121L198.393 111.761L215.696 129.009L181.226 163.369L215.69 197.722L198.386 214.971L163.923 180.617L129.438 214.992L112.134 197.744L146.619 163.369L112.128 128.988Z" data-svg-origin="163.9119987487793 163.3655014038086"></path></svg>
-          </a>
-        </div>
-
-        <div class="footer__item menu-list flow" data-space="sm">
-          <h3 class="menu-list__title text-300 font-primary weight-normal uppercase">Connect with us</h3>
+    <div class="menu" id="menu">
+      <div class="menu__wrapper container">
+        <div
+          class="menu-list flow"
+          style="--_clr-menu-list-hsl: var(--clr-background-hsl)"
+        >
+          <h3
+            class="menu-list__title text-300 font-primary weight-normal uppercase"
+          >
+            Connect with us
+          </h3>
           <ul class="text-350" role="list">
             <li>
               <a href="javascript:void(0)">Facebook</a>
@@ -334,9 +234,15 @@
             </li>
           </ul>
         </div>
-
-        <div class="footer__item menu-list flow" data-space="sm">
-          <h3 class="menu-list__title text-300 font-primary weight-normal uppercase">The nitty gritties</h3>
+        <div
+          class="menu-list flow"
+          style="--_clr-menu-list-hsl: var(--clr-background-hsl)"
+        >
+          <h3
+            class="menu-list__title text-300 font-primary weight-normal uppercase"
+          >
+            Nitty gritties
+          </h3>
           <ul class="text-350" role="list">
             <li>
               <a href="javascript:void(0)">Good Things FAQs</a>
@@ -355,37 +261,528 @@
             </li>
           </ul>
         </div>
-
-        <div class="footer__item flow" data-space="sm">
-          <h3 class="text-300 font-primary weight-normal uppercase">Acknowledgement of country</h3>
-          <p class="text-350">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit esse quibusdam exercitationem ab molestias, error unde, iusto officiis possimus quia harum consectetur laborum! Corrupti fuga possimus blanditiis cupiditate natus nostrum. Odio similique itaque dolorem sit nemo id ut suscipit. Ipsum inventore exercitationem aut accusamus tempore. Nisi temporibus quam, nam consectetur voluptatum libero velit sed nostrum doloribus labore consequatur. Iste, asperiores non. Porro quia ipsum saepe ea eveniet impedit officia repellat necessitatibus modi nobis laudantium omnis, molestiae dignissimos non error illo! Rerum facere quas dolorem molestias?
-          </p>
-        </div>
-
-        <div class="footer__item">
-          <ul class="text-300 uppercase" role="list">
+        <nav class="font-accent uppercase" aria-label="Primary">
+          <ul role="list">
             <li>
-              <a href="javascript:void(0)">&copy; Two Good Co. <span id="copyright-year">2023</span></a>
+              <a href="javascript:void(0)">Shop</a>
             </li>
             <li>
-              <a href="javascript:void(0)">Terms of use</a>
+              <a href="javascript:void(0)">Catering</a>
             </li>
             <li>
-              <a href="javascript:void(0)">Privacy Policy</a>
+              <a href="javascript:void(0)">Impact</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">Stories</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">About</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">Contact</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">Donate</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">Sign in</a>
             </li>
           </ul>
-        </div>
+        </nav>
       </div>
-    </footer>
-  </div>
+    </div>
 
-  <div class="hero__video-cursor font-accent uppercase" id="video-cursor">Play</div>
-  <div class="cursor" id="cursor"></div>
+    <div data-scroll-container>
+      <section class="hero section" data-scroll-section>
+        <div class="container flow">
+          <h1 class="hero__title uppercase">
+            <span><span>Change</span></span>
+            <span><span>The</span></span>
+            <span><span>Course</span></span>
+          </h1>
 
-  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="js/script.js"></script>
-</body>
+          <div class="hero__video">
+            <video loop muted src="./assets/media/video.mp4"></video>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured section" data-scroll-section>
+        <div class="featured__wrapper container">
+          <h2 class="section__title text-300 uppercase">
+            <span>Buy Good</span>
+            <span>Do Good</span>
+          </h2>
+          <div class="grid-layout">
+            <div class="featured__item scroll-img-wrapper">
+              <img
+                data-scroll
+                data-scroll-speed="-1"
+                src="https://cdn.sanity.io/images/w8f1ak3c/production/ee1c2e8894a4c47c4f4ce71b8973589f8a5045b2-902x1500.png/Rectangle%203.png?rect=1,0,900,1500&w=640&h=1067&fit=min&auto=format"
+                alt=""
+              />
+              <div
+                class="featured__dropdown"
+                style="--_bg-dropdown: #c3d8c5"
+                data-scroll
+                data-scroll-speed="-2"
+              >
+                <div class="featured__dropdown-controls text-300">
+                  <i class="fa-solid fa-circle fa-2xs" aria-hidden="true"></i>
+                  <div class="uppercase">Shop</div>
+                  <div class="uppercase" style="font-weight: 600">Home</div>
+                  <i class="fa-solid fa-chevron-right fa-2xs"></i>
+                </div>
+                <div class="featured__dropdown-list">
+                  <div class="text-center">
+                    <figure>
+                      <img
+                        width="100%"
+                        src="https://cdn.sanity.io/images/w8f1ak3c/production/f43af4d1c96e6232fcc4743fc383f08aac0d3658-2900x2900.png/Tea-Towel-Two-Good-Co.png?w=320&h=320&auto=format"
+                        alt=""
+                      />
+                      <figcaption class="text-300 uppercase">
+                        Two good towel
+                      </figcaption>
+                    </figure>
+                    <figure>
+                      <img
+                        width="100%"
+                        src="https://cdn.sanity.io/images/w8f1ak3c/production/f43af4d1c96e6232fcc4743fc383f08aac0d3658-2900x2900.png/Tea-Towel-Two-Good-Co.png?w=320&h=320&auto=format"
+                        alt=""
+                      />
+                      <figcaption class="text-300 uppercase">
+                        Two good towel
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="featured__item scroll-img-wrapper">
+              <img
+                data-scroll
+                data-scroll-speed="-1"
+                src="https://cdn.sanity.io/images/w8f1ak3c/production/bb84b7106e978c37f5aa92c8d5781751b2e9d9f2-900x1500.png/Rectangle%202.png?w=420&h=700&auto=format"
+                alt=""
+              />
+              <div
+                class="featured__dropdown"
+                data-scroll
+                data-scroll-speed="-2"
+              >
+                <div class="featured__dropdown-controls text-300">
+                  <i class="fa-solid fa-circle fa-2xs" aria-hidden="true"></i>
+                  <div class="uppercase">Shop</div>
+                  <div class="uppercase" style="font-weight: 600">Pantry</div>
+                  <i class="fa-solid fa-chevron-right fa-2xs"></i>
+                </div>
+                <div class="featured__dropdown-list">
+                  <div class="text-center">
+                    <figure>
+                      <img
+                        width="100%"
+                        src="https://cdn.sanity.io/images/w8f1ak3c/production/f43af4d1c96e6232fcc4743fc383f08aac0d3658-2900x2900.png/Tea-Towel-Two-Good-Co.png?w=320&h=320&auto=format"
+                        alt=""
+                      />
+                      <figcaption class="text-300 uppercase">
+                        Two good towel
+                      </figcaption>
+                    </figure>
+                    <figure>
+                      <img
+                        width="100%"
+                        src="https://cdn.sanity.io/images/w8f1ak3c/production/f43af4d1c96e6232fcc4743fc383f08aac0d3658-2900x2900.png/Tea-Towel-Two-Good-Co.png?w=320&h=320&auto=format"
+                        alt=""
+                      />
+                      <figcaption class="text-300 uppercase">
+                        Two good towel
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="featured__item scroll-img-wrapper">
+              <img
+                data-scroll
+                data-scroll-speed="-1"
+                src="https://cdn.sanity.io/images/w8f1ak3c/production/d3151106849ff2494d66916cf554c68a0603444d-902x1500.png/Rectangle%20220.png?rect=1,0,900,1500&w=640&h=1067&fit=min&auto=format"
+                alt=""
+              />
+              <div
+                class="featured__dropdown"
+                style="--_bg-dropdown: var(--clr-background)"
+                data-scroll
+                data-scroll-speed="-2"
+              >
+                <div class="featured__dropdown-controls text-300">
+                  <i class="fa-solid fa-circle fa-2xs" aria-hidden="true"></i>
+                  <div class="uppercase">Shop</div>
+                  <div class="uppercase" style="font-weight: 600">Bath</div>
+                  <i class="fa-solid fa-chevron-right fa-2xs"></i>
+                </div>
+                <div class="featured__dropdown-list">
+                  <div class="text-center">
+                    <figure>
+                      <img
+                        width="100%"
+                        src="https://cdn.sanity.io/images/w8f1ak3c/production/f43af4d1c96e6232fcc4743fc383f08aac0d3658-2900x2900.png/Tea-Towel-Two-Good-Co.png?w=320&h=320&auto=format"
+                        alt=""
+                      />
+                      <figcaption class="text-300 uppercase">
+                        Two good towel
+                      </figcaption>
+                    </figure>
+                    <figure>
+                      <img
+                        width="100%"
+                        src="https://cdn.sanity.io/images/w8f1ak3c/production/f43af4d1c96e6232fcc4743fc383f08aac0d3658-2900x2900.png/Tea-Towel-Two-Good-Co.png?w=320&h=320&auto=format"
+                        alt=""
+                      />
+                      <figcaption class="text-300 uppercase">
+                        Two good towel
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="belief section" data-scroll-section>
+        <div class="container grid-layout">
+          <div class="col-span-2">
+            <h2 class="text-700 uppercase" data-scroll-heading>
+              We believe in people, until they believe in themselves again.
+            </h2>
+          </div>
+          <div class="flow" data-space="lg">
+            <p>
+              Everything we do is designed to rebuild self worth and
+              independence, in order to break free from the cycle of
+              disadvantage.
+            </p>
+            <p>
+              With every purchase you make with us, you're helping to change the
+              course of someone's life; you're walking alongside vulnerable
+              women as they find their way home again.
+            </p>
+            <a
+              class="hoverable-link underlined text-300 uppercase"
+              href="javascript:void(0)"
+              >Shop to support</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="products section" data-scroll-section>
+        <div class="products__wrapper container" id="products-wrapper">
+          <div
+            class="products__card text-center flow"
+            data-rgba="248, 210, 16, 0.2"
+            data-space="xs"
+          >
+            <img
+              class="mx-auto"
+              width="80%"
+              src="https://cdn.sanity.io/images/w8f1ak3c/production/d6a2a4be8e3063d64648773f57f5f447609a93ab-5000x5000.png/Love-Care-Pack-Expanded-Two-Good-Co.png?w=1024&h=1024&auto=format"
+              alt="The Love + Care Pack"
+            />
+            <h3
+              class="products__card-title weight-normal font-primary text-300 uppercase"
+            >
+              The Love + Care Pack
+            </h3>
+            <p class="products__card-price text-200">$50</p>
+          </div>
+          <div
+            class="products__card text-center flow"
+            data-rgba="255, 105, 105, 0.2"
+            data-space="xs"
+          >
+            <img
+              class="mx-auto"
+              width="80%"
+              src="https://cdn.sanity.io/images/w8f1ak3c/production/7a2007de38624a0b2935416bf51a4584889aa232-5000x5000.png/Website%20Products%20(12).png?w=1024&h=1024&auto=format"
+              alt="Two good tote bag"
+            />
+            <h3
+              class="products__card-title weight-normal font-primary text-300 uppercase"
+            >
+              Two good tote bag
+            </h3>
+            <p class="products__card-price text-200">$50</p>
+          </div>
+          <div
+            class="products__card text-center flow"
+            data-rgba="93, 18, 210, 0.2"
+            data-space="xs"
+          >
+            <img
+              class="mx-auto"
+              width="80%"
+              src="https://cdn.sanity.io/images/w8f1ak3c/production/99866b12faf44f7490e6037dc197947334ce0a72-1408x1408.png/Nourish%20&%20Soothe%20Hand%20Lotion%20Two%20Good%20Co.png?w=1024&h=1024&auto=format"
+              alt="Nourish & sooth hand lotion"
+            />
+            <h3
+              class="products__card-title weight-normal font-primary text-300 uppercase"
+            >
+              Nourish & sooth hand lotion
+            </h3>
+            <p class="products__card-price text-200">$50</p>
+          </div>
+          <div
+            class="products__card text-center flow"
+            data-rgba="100, 153, 233, 0.2"
+            data-space="xs"
+          >
+            <img
+              class="mx-auto"
+              width="80%"
+              src="https://cdn.sanity.io/images/w8f1ak3c/production/02240d01db2e8bdc5c630e9832ff7e0c7614f733-1876x1876.png/Cookbook-Two-Recipes-For-Resilience-Two-Good-Co.png?w=1024&h=1024&auto=format"
+              alt="Cookbook two"
+            />
+            <h3
+              class="products__card-title weight-normal font-primary text-300 uppercase"
+            >
+              Cookbook two
+            </h3>
+            <p class="products__card-price text-200">$50</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonial section" data-scroll-section>
+        <div class="testimonial__wrapper container flow">
+          <h2 class="section__title text-300 uppercase">
+            <span>Words of goodness</span>
+            <span>Messages of love & support</span>
+          </h2>
+          <div class="testimonial__authors swiper">
+            <div class="swiper-wrapper"></div>
+          </div>
+          <blockquote
+            class="text-700 font-accent text-center uppercase mx-auto"
+            id="review"
+            data-scroll-heading
+          >
+            Thank you so much for the beautiful catering; it means a lot working
+            with a company such as two good co.
+          </blockquote>
+          <button class="btn text-300 uppercase mx-auto" style="display: block">
+            Send your own message
+          </button>
+          <p class="text-center mx-auto">
+            Sometimes it's the smallest actions that can make the biggest
+            impact.
+          </p>
+        </div>
+      </section>
+
+      <section class="section impact" data-scroll-section>
+        <div class="impact__wrapper container">
+          <div class="flow">
+            <h2 class="text-500 uppercase">Our impact.</h2>
+
+            <p>The thing is, we don't save anyone.</p>
+            <p>
+              What we do is provide a safe space for women to change the course
+              of their own lives.
+            </p>
+            <p>
+              After many years of living in crisis, abuse and complex trauma,
+              restoring self-worth is foundational for independence. We believe
+              that through experiences that promote love and respect, we can
+              spark and nurture a sense of self-worth for those on the path of
+              healing.
+            </p>
+
+            <a
+              class="hoverable-link underlined text-300 uppercase"
+              href="javascript:void(0)"
+              >Here's how we do it</a
+            >
+          </div>
+          <div class="scroll-img-wrapper">
+            <img
+              data-scroll
+              data-scroll-speed="-1"
+              src="https://cdn.sanity.io/images/w8f1ak3c/production/943f8f43b76b4e030f41deddca1edd44170fee39-5504x8256.jpg/Christina-Maria-Jes-Lindsay-9143.jpg?fp-x=0.5&fp-y=0.5&w=420&h=621&fit=crop&crop=focalpoint&auto=format"
+              alt=""
+            />
+          </div>
+          <div class="scroll-img-wrapper">
+            <img
+              data-scroll
+              data-scroll-speed="-1"
+              src="https://cdn.sanity.io/images/w8f1ak3c/production/84da7b8b510e006ce0ca22769d93bb6c044945f6-5504x8256.jpg/Patricia-Work-Work-Good-Stories-Two-Good-Co.jpg?rect=0,59,5504,8138&w=420&h=621&fit=min&auto=format"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer" data-scroll-section>
+        <div class="footer__wrapper container">
+          <h2 class="section__title uppercase">
+            <span class="text-600 font-accent"
+              >Enter your email address for good</span
+            >
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </h2>
+          <div class="footer__item">
+            <a href="javascript:void(0)">
+              <svg
+                viewBox="0 0 216 215"
+                fill="var(--clr-foreground)"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M51.7757 0C38.0521 0 24.8906 5.43423 15.1866 15.1072C5.48261 24.7802 0.0309982 37.8997 0.0309982 51.5794C0.0309982 65.2591 5.48261 78.3785 15.1866 88.0515C24.8906 97.7245 38.0521 103.159 51.7757 103.159C65.4992 103.159 78.6607 97.7245 88.3647 88.0515C98.0687 78.3785 103.52 65.2591 103.52 51.5794C103.52 37.8997 98.0687 24.7802 88.3647 15.1072C78.6607 5.43423 65.4992 0 51.7757 0Z"
+                  data-svg-origin="51.775497406721115 51.579498291015625"
+                  transform="matrix(1,0,0,1,0,0)"
+                  style="transform-origin: 0px 0px; opacity: 1"
+                ></path>
+                <path
+                  d="M163.911 0C150.187 0 137.026 5.43423 127.322 15.1072C117.618 24.7802 112.166 37.8997 112.166 51.5794C112.166 65.2591 117.618 78.3785 127.322 88.0515C137.026 97.7245 150.187 103.159 163.911 103.159C177.634 103.159 190.796 97.7245 200.5 88.0515C210.204 78.3785 215.655 65.2591 215.655 51.5794C215.655 37.8997 210.204 24.7802 200.5 15.1072C190.796 5.43423 177.634 0 163.911 0Z"
+                  data-svg-origin="163.9104995727539 51.579498291015625"
+                  transform="matrix(1,0,0,1,0,0)"
+                  style="transform-origin: 0px 0px; opacity: 1"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M0 129.002L17.3035 111.753L51.795 146.135L86.2649 111.775L103.568 129.023L69.0982 163.383L103.562 197.737L86.2586 214.985L51.7947 180.631L17.3099 215.006L0.00634766 197.758L34.4914 163.383L0 129.002Z"
+                  data-svg-origin="51.784000396728516 163.37949752807617"
+                  transform="matrix(1,0,0,1,0,0)"
+                  style="transform-origin: 0px 0px; opacity: 1"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M112.128 128.988L129.431 111.739L163.923 146.121L198.393 111.761L215.696 129.009L181.226 163.369L215.69 197.722L198.386 214.971L163.923 180.617L129.438 214.992L112.134 197.744L146.619 163.369L112.128 128.988Z"
+                  data-svg-origin="163.9119987487793 163.3655014038086"
+                ></path>
+              </svg>
+            </a>
+          </div>
+
+          <div class="footer__item menu-list flow" data-space="sm">
+            <h3
+              class="menu-list__title text-300 font-primary weight-normal uppercase"
+            >
+              Connect with us
+            </h3>
+            <ul class="text-350" role="list">
+              <li>
+                <a href="javascript:void(0)">Facebook</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">Instagram</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">Twitter</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">LinkedIn</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">YouTube</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__item menu-list flow" data-space="sm">
+            <h3
+              class="menu-list__title text-300 font-primary weight-normal uppercase"
+            >
+              The nitty gritties
+            </h3>
+            <ul class="text-350" role="list">
+              <li>
+                <a href="javascript:void(0)">Good Things FAQs</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">Good Food FAQs</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">Good Places</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">Pathways</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">Careers</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__item flow" data-space="sm">
+            <h3 class="text-300 font-primary weight-normal uppercase">
+              Acknowledgement of country
+            </h3>
+            <p class="text-350">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+              esse quibusdam exercitationem ab molestias, error unde, iusto
+              officiis possimus quia harum consectetur laborum! Corrupti fuga
+              possimus blanditiis cupiditate natus nostrum. Odio similique
+              itaque dolorem sit nemo id ut suscipit. Ipsum inventore
+              exercitationem aut accusamus tempore. Nisi temporibus quam, nam
+              consectetur voluptatum libero velit sed nostrum doloribus labore
+              consequatur. Iste, asperiores non. Porro quia ipsum saepe ea
+              eveniet impedit officia repellat necessitatibus modi nobis
+              laudantium omnis, molestiae dignissimos non error illo! Rerum
+              facere quas dolorem molestias?
+            </p>
+          </div>
+
+          <div class="footer__item">
+            <ul class="text-300 uppercase" role="list">
+              <li>
+                <a href="javascript:void(0)"
+                  >&copy; Two Good Co. <span id="copyright-year">2023</span></a
+                >
+              </li>
+              <li>
+                <a href="javascript:void(0)">Terms of use</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div class="hero__video-cursor font-accent uppercase" id="video-cursor">
+      Play
+    </div>
+    <div class="cursor" id="cursor"></div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+      integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+      integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
